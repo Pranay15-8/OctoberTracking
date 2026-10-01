@@ -61,3 +61,119 @@ class Solution {
 }
 ------------------------------------------------------
 HTML PRATICE(Lists,Tables,Forms)
+//LISTS
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- lists,tables and forms -->
+    <title>HTML Lists</title>
+</head>
+<body>
+    <!-- Unordered List(ul) -->
+     <!-- Ordered List(ol) -->
+      <!-- List item(li) -->
+    <ul type="circle">
+        <li>Home</li>
+        <li>About</li>
+        <li>Contact</li>
+    </ul>
+  <ol type="i" start="7">
+        <li>Home</li>
+        <li>About</li>
+        <li>Contact</li>
+  </ol>
+         
+    
+</body>
+</html>
+------------------------------------------------------------------------
+//TABLES
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Tables</title>
+</head>
+
+<body>
+    <div>
+        <table>
+            <thead>
+                <caption>Student Information</caption>
+                <tr>
+                    <th>Roll.no</th>
+                    <th>Name</th>
+                    <th>Section</th>
+                    <th>Branch</th>
+                    <th>Year</th>
+                </tr>
+                <tr>
+                    <td>B1</td>
+                    <td>B.Prany</td>
+                    <td>F</td>
+                    <td>CSE</td>
+                    <td>3rd</td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>B2</td>
+                    <td>B.Rajesh</td>
+                    <td>F</td>
+                    <td>CSE</td>
+                    <td>3rd</td>
+                </tr>
+                <tr>
+                    <td>CH</td>
+                    <td>T.Sushanth</td>
+                    <td>F</td>
+                    <td>CSE</td>
+                    <td>3rd</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+
+</html>
+----------------------------------------------------------------
+//FORMS
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+</head>
+<body>
+    <h1>User Information</h1>
+    <input type="text" placeholder="Enter Your Name">
+    <br>
+    <input type="radio" value="CSE" name="branch" id="cse">
+    <label for="cse">CSE</label><br>
+    <input type="radio" value="ECE" name="branch" id="ece">
+    <label for="ece">ECE</label><br>
+    <input type="radio" value="CSM" name="branch" id="csm">
+    <label for="csm">CSM</label><br>
+    <input type="radio" value="CSD" name="branch" id="csd">
+    <label for="csd">CSD</label><br>
+    <input type="checkbox" value="D" name="section" id="d">
+    <label for="d">Section D</label><br>
+    <input type="checkbox" value="E" name="section" id="e">
+    <label for="e">Section E</label><br>
+    <input type="checkbox" value="F" name="section" id="f">
+    <label for="f">Section F</label><br>
+   <textarea name="explain" id="explain" cols="10" rows="10" placeholder="Explain about your branch"></textarea>
+   <select name="course" id="course">Select your course
+    <option value="dbms">DBMS</option>
+    <option value="os">Operating Systems</option>
+    <option value="cn">Computer Networks</option>
+    <option value="none">None</option>
+   </select>
+</body> 
+</html> 
+--------------------------------------------------------------
