@@ -1,0 +1,215 @@
+ public ArrayList<Integer> leftView(Node root) {
+        // code here
+        ArrayList<Integer> ans=new ArrayList<>();
+        if(root==null)
+        return ans;
+        
+        Queue<Node> q=new LinkedList<>();
+        q.offer(root);
+        while(!q.isEmpty()){
+            int v=q.peek().data;
+            int n=q.size();
+            for(int i=0;i<n;i++){
+                root=q.poll();
+                if(root.left!=null)
+                q.offer(root.left);
+                if(root.right!=null)
+                q.offer(root.right);
+            }
+            ans.add(v);
+        }
+        return ans;
+    }
+------------------------------
+  public List<Integer> rightSideView(TreeNode root) {
+        
+       List<Integer> ans=new ArrayList<>();
+       if(root==null)
+       return ans;
+       Queue<TreeNode> q=new LinkedList<>();
+        q.offer(root);
+        while(!q.isEmpty()){
+            int n=q.size();
+            int v=0;
+            for(int i=0;i<n;i++){
+                root=q.poll();
+                if(root.left!=null)
+                q.offer(root.left);
+                if(root.right!=null)
+                q.offer(root.right);
+                v=root.val;
+            }
+            ans.add(v);
+        }
+        return ans;
+        
+    }
+-------------------------------
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset=""UTF-8>
+        <title>My Hobbies Page</title>
+    </head>
+    <body>
+        <h1>My Hobbies</h1>
+        <br>
+        <h3>I enjoy these activities in my free time</h3>
+        <br>
+        <div>
+            <h2>My Hobbies:</h2>
+            <ul>
+                <li>Playing Cricket</li>
+                <li>Watching Cricket</li>
+                <li>Solving DSA</li>
+                <li>Watching Reels</li>
+            </ul>
+        </div>
+        <br>
+        <div>
+            <h2>My Preference:</h2>
+            <ol>
+                <li>Playing Cricket</li>
+                <li>Watching Cricket</li>
+                <li>Solving DSA</li>
+                <li>Watching Reels</li>
+            </ol>
+        </div>
+        <br>
+        <img src="https://media.gettyimages.com/id/2264959223/photo/mumbai-india-players-of-india-celebrate-following-the-icc-mens-t20-world-cup-india-sri-lanka.jpg?s=612x612&w=gi&k=20&c=Whvlwa8gacVxGypUy6zszrs6SpKRiJf00O9NVcPUSeg=" alt="Cricket Match" width="400">
+    <br>
+    <a href="https://www.cricketlive.com">Learn More About Cricket</a>
+    </body>
+</html>
+------------------------------------------------------------------------
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>College Time Table Page</title>
+    </head>
+    <body>
+        <h1>COLLEGE TIME TABLE</h1>
+        <br>
+        <table>
+            <tr>
+                <th>Day</th>
+                <th>9-10</th>
+                <th>10-11</th>
+                <th>11-12</th>
+                <th>1-2</th>
+            </tr>
+            <tr>
+                <td>MONDAY</td>
+                <td>JAVA</td>
+                <td>DBMS</td>
+                <td>OS</td>
+                <td>DSA</td>
+            </tr>
+              <tr>
+                <td>TUESDAY</td>
+                <td>CN</td>
+                <td>JAVA</td>
+                <td>DSA</td>
+                <td>DBMS</td>
+            </tr>
+              <tr>
+                <td>WEDNESDAY</td>
+                <td>OS</td>
+                <td>CN</td>
+                <td>JAVA</td>
+                <td>DSA</td>
+            </tr>
+              <tr>
+                <td>THURSDAY</td>
+                <td>DSA</td>
+                <td>OS</td>
+                <td>DBMS</td>
+                <td>JAVA</td>
+            </tr>
+              <tr>
+                <td>FRIDAY</td>
+                <td>JAVA</td>
+                <td>CN</td>
+                <td>DSA</td>
+                <td>OS</td>
+            </tr>
+        </table>
+    </body>
+</html>
+----------------------------------------------------------------
+
+class Solution {
+    public ArrayList<ArrayList<Integer>> paths(Node root) {
+        // code here
+        ArrayList<ArrayList<Integer>> ans=new ArrayList<>();
+        ArrayList<Integer> in=new ArrayList<>();
+        dfs(root,ans,in);
+        return ans;
+    }
+    public void dfs(Node root,ArrayList<ArrayList<Integer>> ans,ArrayList<Integer> in){
+        if(root.left==null&&root.right==null){
+            in.add(root.data);
+            ans.add(new ArrayList<>(in));
+            in.remove(in.size()-1);
+            return;
+        }
+        in.add(root.data);
+        if(root.left!=null)
+        dfs(root.left,ans,in);
+        if(root.right!=null)
+        dfs(root.right,ans,in);
+        in.remove(in.size()-1);
+    }
+}
+-----------------------------------------------------------------
+ public TreeNode lowestCommonAncestor(TreeNode root, TreeNode p, TreeNode q) {
+        if(root==null||p==root||q==root){
+            return root;
+        }
+        TreeNode left=lowestCommonAncestor(root.left,p,q);
+        TreeNode right=lowestCommonAncestor(root.right,p,q);
+
+        if(left!=null&&right!=null)
+        return root;
+        return (left!=null)?left:right;
+    }
+------------------------------------------
+ class tuple{
+    TreeNode root;
+    int d;
+    public tuple(TreeNode root,int d){
+        this.root=root;
+        this.d=d;
+    }
+ }
+class Solution {
+    public int widthOfBinaryTree(TreeNode root) {
+        if(root==null)
+        return 0;
+        int ans=0;
+        Queue<tuple> q=new LinkedList<>();
+        q.offer(new tuple(root,0));
+        while(!q.isEmpty()){
+            int s=q.size();
+            int last=0,first=0;
+            int min=q.peek().d;
+            for(int i=0;i<s;i++){
+                int j=q.peek().d-min;
+                TreeNode t=q.peek().root;
+                q.poll();
+               
+                if(i==0)first=j;
+                if(i==s-1)last=j;
+                if(t.left!=null)
+                q.offer(new tuple(t.left,j*2+1));
+                if(t.right!=null)
+                q.offer(new tuple(t.right,j*2+2));
+            }
+            ans=Math.max(ans,last-first+1);
+        }
+        return ans;
+    }
+}
+---------------------------------------------------
+
