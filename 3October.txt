@@ -1,0 +1,318 @@
+
+class Solution {
+    public boolean checkTree(TreeNode root) {
+        if(root==null)
+        return true;
+
+        if(root.left==null&&root.right==null)
+        return true;
+
+         int c=0;
+         if(root.left!=null)
+         c+=root.left.val;
+         if(root.right!=null)
+         c+=root.right.val;
+
+         return (c==root.val)&&checkTree(root.left)&&checkTree(root.right);
+        
+    }
+}
+----------------------------------------------------
+class Solution {
+    public int deepestLeavesSum(TreeNode root) {
+        Queue<TreeNode> q=new LinkedList<>();
+        int last=0;
+        q.offer(root);
+        while(!q.isEmpty()){
+            last=0;
+            int n=q.size();
+            for(int i=0;i<n;i++){
+                root=q.poll();
+                last+=root.val;
+                if(root.left!=null)
+                q.offer(root.left);
+                if(root.right!=null)
+                q.offer(root.right);
+            }
+        }
+        return last;
+    }
+}
+-----------------------------------------------
+class Solution {
+    public int longestValidParentheses(String s) {
+       int ans=0;
+       Stack<Integer> st=new Stack<>();
+       st.push(-1);
+       for(int i=0;i<s.length();i++){
+          if(s.charAt(i)=='('){
+            st.push(i);
+          }else{
+             st.pop();
+             if(st.isEmpty())
+             st.push(i);
+             else
+             ans=Math.max(ans,i-st.peek());
+          }
+       }
+       return ans;
+    }
+}
+----------------------------------------------------
+<!DOCTYPE>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>REGISTRATION FORM</title>
+</head>
+
+<body>
+    <h1>Registration Form</h1>
+    <br>
+    <h3>Person Details</h3>
+    <p>Full name:<input type="text" name="full name"></p>
+    <p>Email:<input type="email" name="email"></p>
+    <p>Password:<input type="password" name="password"></p>
+    <p>Date of Birth: <input type="date" name="date of birth"></p>
+    <p>Gender:<input type="radio" name="gender" value="male">Male<input type="radio" name="gender"
+            value="female">Female<input type="radio" name="gender" value="other">Other</p>
+    <p>Branch:<select name="branch">
+            <option value="">Select Branch</option>
+            <option value="cse">CSE</option>
+            <option value="csm">CSM</option>
+            <option value="ece">ECE</option>
+            <option value="eee">EEE</option>
+            <option value="mech">MECH</option>
+        </select></p>
+    <p>Hobbies:<input type="checkbox" name="hobbies" value="Cricket">Cricket
+        <input type="checkbox" name="hobbies" value="Coding">Coding
+        <input type="checkbox" name="hobbies" value="Reading">Reading
+        <input type="checkbox" name="hobbies" value="Gaming">Gaming
+    </p>
+
+    <p>Address:<textarea name="address" cols=1 rows=2>
+    </textarea></p>
+    <input type="button" value="Register">
+    <input type="button" value="Reset">
+
+</body>
+
+</html>
+--------------------------------------------------------------
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Personal Resume Page</title>
+</head>
+
+<body>
+    <div>
+        <h3>Personal Information</h3>
+        <p> Name: B.Pranay</p>
+        <p>Email:pranaybandela1586@gmail.com</p>
+        <p>Phone: 9392423295</p>
+        <p>Location: Sangem,Warangal</p>
+    </div>
+    <div>
+        <h3>Carrer Objective</h3>
+        <p>
+            To work in a challenging environment where I can utilize my skills and knowledge to contribute to the growth
+            of the organization and enhance my professional career.
+        </p>
+    </div>
+    <div>
+        <h3>Eduation</h3>
+        <table border="1">
+            <tr>
+                <th>Degree</th>
+                <th>College</th>
+                <th>Year</th>
+                <th>Percentage</th>
+            </tr>
+            <tr>
+                <td>B.Tech</td>
+                <td>CMR COLLEGE OF ENGINEERING AND TECHNOLOGY</td>
+                <td>2028</td>
+                <td>92</td>
+            </tr>
+            <tr>
+                <td>Intermediate</td>
+                <td>Narayana junior college</td>
+                <td>2024</td>
+                <td>98.5</td>
+            </tr>
+            <tr>
+                <td>SSC</td>
+                <td>S.V.B High School</td>
+                <td>2022</td>
+                <td>95</td>
+            </tr>
+        </table>
+    </div>
+    <div>
+        <h3>Technical Skills</h3>
+        <ul>
+            <li>C</li>
+            <li>JAVA</li>
+            <li>SQL</li>
+            <li>HTML</li>
+            <li>DBMS</li>
+        </ul>
+    </div>
+    <div>
+        <h3>Projects</h3>
+        <p><b>Stress Analysis:</b> Developed a stress analysis tool using C++ to simulate and analyze stress
+            distribution in mechanical components.</p>
+        <p><b>Pneumonia Diagnosis:</b> Created a machine learning model to assist in the early detection of pneumonia
+            from chest X-rays.</p>
+    </div>
+    <div>
+        <h3>Certifications</h3>
+        <ul>
+            <li> Certified Java Developer</li>
+            <li> SQL Certified Associate</li>
+            <li> Oracle Certified Professional</li>
+        </ul>
+    </div>
+    <div>
+        <h3>Hobbies</h3>
+        <ul>
+            <li>Cricket </li>
+            <li>Coding</li>
+            <li>Running</li>
+        </ul>
+    </div>
+    <div>
+        <h3>Professional Links</h3>
+        <a href="https://www.linkedin.com/in/pranay1586" target="_blank">LinkedIn</a>
+        <a href="https://github.com/Pranay15-8" target="_blank">GitHub</a>
+        <a href="https://leetcode.com/u/pranay_leetcoder" target="_blank">LeetCode</a>
+    </div>
+</body>
+
+</html>
+----------------------------------------------------------------
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Course Registration</title>
+    </head>
+    <body>
+        <header>
+            <h1>        CMR College of Engineering and Technology
+                 Course Registration</h1>
+                 
+        </header>
+        <section>
+            <nav>   <a href="www.home">HOME</a>
+                    <a href="www.Course">COURSES</a>
+                    <a href="www.Faculty">FACULTY</a>
+                    <a href="www.Contact">CONTACT</a>
+                 </nav>
+        </section>
+        <hr>
+        <main>
+            <Section>
+                <h2>Student Information</h2>
+                <p>Student Name:<input type="text" name="studentName"></p>
+                <p>Roll Number:<input type="text" name="rollNumber"></p>
+                <p>Email:<input type="email" name="email"></p>
+                <p>Phone:<input type="tel" name="phone"></p>
+                <p>Date of Birth:<input type="date" name="dateOfBirth"></p>
+                <p>Gender:<input type="radio" name="gender" value="male">Male
+                <input type="radio" name="gender" value="female">Female
+            <input type="radio" name="gender" value="other">Other</p>
+            </Section>
+            <hr>
+            <section>
+                <h2>Course Selection</h2>
+                <p>Select Course:<select name="course">
+                    <option value="">Select Couse</option>
+                    <option value="java">JAVA</option>
+                    <option value="python">PYTHON</option>
+                    <option value="web development">WEB DEVELOPMENT</option>
+                    <option value="data structures">DATA STRUCTURES</option>
+                    <option value="dbms">DBMS</option>
+                    <option value="cn">CN</option>
+                </select></p>
+            
+            <hr>
+            
+                <h2>Interest</h2>
+                <input type="checkbox" name="programming" value="programming">Programming
+                <input type="checkbox" name="web dev" value="web dev">Web Developnment
+                <input type="checkbox" name="database" value="database">Database
+                <input type="checkbox" name="networking" value="networking">Networking
+                <input type="checkbox" name="ai/ml" value="ai/ml">AI/ML
+            </section>
+            <hr>
+            <section>
+                <h2>Semester</h2>
+                <p>Semester:<input type="radio" name="semester" value="first">1st Year
+                   <input type="radio" name="semester" value="second">2nd Year
+                   <input type="radio" name="semester" value="third">3rd Year
+                   <input type="radio" name="semester" value="fourth">4th Year   
+                </p>
+            </section>
+            <hr>
+            <section>
+                <h2>Previous Knowledge</h2>
+                <textarea name="tell us about yourself" cols="30" rows="5"></textarea>
+            </section>
+            <hr>
+            <section>
+                <h2>Course Information table</h2>
+                <table border="1">
+                    <caption>Course Information</caption>
+                    <tr>
+                        <th>Course</th>
+                        <th>Duration</th>
+                        <th>Level</th>
+                        <th>Mode</th>
+                    </tr>
+                    <tr>
+                        <td>JAVA</td>
+                        <td>12 weeks</td>
+                        <td>Beginner</td>
+                        <td>Online</td>
+                    </tr>
+                    <tr>
+                        <td>PYTHON</td>
+                        <td>16 weeks</td>
+                        <td>Intermediate</td>
+                        <td>Offline</td>
+                    </tr>
+                    <tr>
+                        <td>WEB DEVELOPMENT</td>
+                        <td>20 weeks</td>
+                        <td>Advanced</td>
+                        <td>Online</td>
+                    </tr>
+                    <tr>
+                        <td>DATA STRUCTURES</td>
+                        <td>14 weeks</td>
+                        <td>Intermediate</td>
+                        <td>Offline</td>
+                    </tr>
+
+                </table>
+            </section>
+            <hr>
+            <section>
+                <input type="button" name="register" value="Register">
+                <input type="reset" name="reset" value="Reset">
+            </section>
+
+        </main>
+        <hr>
+        <footer>
+            © 2026 CMR College of Engineering and Technology
+Contact: college@example.com
+        </footer>
+    </body>
+</html>
+------------------------------------------------------------------------
