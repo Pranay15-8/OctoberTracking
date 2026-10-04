@@ -1,0 +1,366 @@
+FINAL PROJECT ON HTML
+------------------------------------------------------------------
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CMR University - College Website</title>
+</head>
+
+<body>
+    <header>
+        <h1>CMR University</h1>
+        <h2>Welcome to CMR University</h2>
+        <p>Empowering students through quality education and innovation.</p>
+    </header>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="courses.html">Courses</a>
+        <a href="faculty.html">Faculty</a>
+        <a href="contact.html">Contact</a>
+        <a href="register.html">Register</a>
+    </nav>
+    <section>
+        <h2>About College</h2>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Minima et, aperiam dolorem a obcaecati magnam cum
+            pariatur debitis doloremque porro rerum aut sed eligendi molestiae incidunt similique labore doloribus?
+            Suscipit, eligendi quam vitae natus quos voluptatem ab error fugit distinctio sapiente soluta consequuntur
+            corporis nihil numquam, veniam voluptatum necessitatibus debitis rerum rem quod in. Voluptas.</p>
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQFVp0hYntY1PA7VKQGITBp2JYNsTrlcfPzdmfA7JC9cA&s=10"
+            alt="CMRCET" width="840">
+    </section>
+    <section>
+        <h2>Courses Section</h2>
+        <table border="1">
+            <caption>Course Details</caption>
+            <tr>
+                <th>Course</th>
+                <th>Duration</th>
+                <th>Eligibility</th>
+                <th>Mode</th>
+            </tr>
+            <tr>
+                <td>B.Tech CSE</td>
+                <td>4 Years</td>
+                <td>10+2</td>
+                <td>Full Time</td>
+            </tr>
+            <tr>
+                <td>B.Tech CSM</td>
+                <td>4 Years</td>
+                <td>10+2</td>
+                <td>Full Time</td>
+            </tr>
+            <tr>
+                <td>B.Tech ECE</td>
+                <td>4 Years</td>
+                <td>10+2</td>
+                <td>Full Time</td>
+            </tr>
+            <tr>
+                <td>MBA</td>
+                <td>2 Years</td>
+                <td>Graduation</td>
+                <td>Full Time</td>
+            </tr>
+            <tr>
+                <td>M.Tech</td>
+                <td>2 Years</td>
+                <td>B.Tech</td>
+                <td>Full Time</td>
+            </tr>
+        </table>
+    </section>
+    <section>
+        <h2>Faculty Section</h2>
+        <table border="1">
+            <caption>Faculty Details</caption>
+            <tr>
+                <th>Faculty Name</th>
+                <th>Department</th>
+                <th>Experience</th>
+            </tr>
+            <tr>
+                <td>Dr.Raj Kumar</td>
+                <td>CSE</td>
+                <td>12 Experience</td>
+            </tr>
+            <tr>
+                <td>A.VivekAnadha</td>
+                <td>CSE</td>
+                <td>16 Experience</td>
+            </tr>
+            <tr>
+                <td>Mr.Ravi Kumar</td>
+                <td>ECE</td>
+                <td>14 Experience</td>
+            </tr>
+        </table>
+    </section>
+    <section>
+        <h2>Time Table</h2>
+        <table border="1">
+            <caption>College TimeTable</caption>
+            <tr>
+                <th>Day</th>
+                <th>9:00-10:00</th>
+                <th>10:00-11:00</th>
+                <th>11:00-12:00</th>
+                <th>1:00-2:00</th>
+            </tr>
+            <tr>
+                <td>Monday</td>
+                <td>java</td>
+                <td>dbms</td>
+                <td>os</td>
+                <td>dsa</td>
+            </tr>
+            <tr>
+                <td>Tuesday</td>
+                <td>java</td>
+                <td>dbms</td>
+                <td>os</td>
+                <td>dsa</td>
+            </tr>
+            <tr>
+                <td>Wednesday</td>
+                <td>java</td>
+                <td>dbms</td>
+                <td>os</td>
+                <td>dsa</td>
+            </tr>
+            <tr>
+                <td>Thrusday</td>
+                <td>java</td>
+                <td>dbms</td>
+                <td>os</td>
+                <td>dsa</td>
+            </tr>
+            <tr>
+                <td>Friday</td>
+                <td>java</td>
+                <td>dbms</td>
+                <td>os</td>
+                <td>dsa</td>
+            </tr>
+        </table>
+    </section>
+
+    <form>
+        <h2>Student Registration Form</h2>
+
+        <main>
+            <section>
+
+                <label for="name">Full Name:</label>
+                <input type="text" id="name" name="name" placeholder="Enter Your Name">
+                <br>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email"><br>
+                <label for="password">Password:</label>
+
+                <input type="password" id="password" name="password"><br>
+                <label for="dob">Date of Birth:</label>
+                <input type="date" id="dob" name="dob"><br>
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" name="phone"><br>
+                <label for="gender">Gender:</label>
+                <input type="radio" id="male" name="gender">Male
+                <input type="radio" id="female" name="gender">Female
+                <input type="radio" id="other" name="gender">Other
+                <!-- <label for="branch">Branch:</label> -->
+
+
+                <select id="branch" name="branch">Select Branch
+                    <option value="">Select Branch</option>
+                    <option value="cse">CSE</option>
+                    <option value="ece">ECE</option>
+                    <option value="csm">CSM</option>
+                    <option value="eee">EEE</option>
+                </select>
+                <br>
+                <label for="year">Year:</label>
+                <select id="year">Year
+
+                    <option value="">Year</option>
+                    <option value="1">1st Year</option>
+                    <option value="2">2nd Year</option>
+                    <option value="3">3rd Year</option>
+                    <option value="4">4th Year</option>
+                </select><br>
+                <label for="address">Address:</label>
+                <textarea id="address" name="address" rows="1" cols="30"></textarea>
+                <br>
+                <label for="image">Upload Image:</label>
+                <input type="file" id="image" name="image">
+            </section>
+            <section>
+                <label for="course">Course</label>
+                <select id="course">select course
+
+                    <option value="btech">B.Tech</option>
+                    <option value="mtech">M.tech</option>
+                    <option value="mba">MBA</option>
+                </select><br>
+                <label for="interest">Interests:</label>
+                <input type="checkbox" id="java" name="interest">Java
+                <input type="checkbox" id="python" name="interest">Python
+                <input type="checkbox" id="webdev" name="interest">WebDEV
+                <input type="checkbox" id="ds" name="interest">DSA
+            </section>
+            <section>
+                <input type="submit" value="Submit">
+                <input type="reset" value="Reset">
+            </section>
+
+        </main>
+    </form>
+    <section>
+        <h4>Useful links</h4>
+        <nav>
+            <a href="www.cmrcet.com" target="_blank">Google</a>
+            <a href="www.youtube.com" target="_blank">Youtube</a>
+            <a href="www.github.com" target="_blank">Github</a>
+            <a href="www.leetCode.com">LeetCode</a>
+        </nav>
+    </section>
+    <section>
+        <h4>Contact Section</h4>
+        <p>Address:Hyderabd,Telangana</p>
+        <p>Phone:+91 9348288374972</p>
+        <p>Email:cmrcetyff@gmail.com</p>
+    </section>
+    <footer>
+        © 2026 CMR University
+        All Rights Reserved.
+    </footer>
+
+</body>
+
+</html>
+------------------------------------------------------------
+FIND THE NODES THAT ARE AT DISTANCE OF K FROM THE TARGET NODE-LEETCODE
+------------------------------------------------------------
+class Solution {
+    public List<Integer> distanceK(TreeNode root, TreeNode target, int k) {
+        Map<TreeNode,TreeNode> tm=new HashMap<>();
+        findParent(root,tm);
+        Set<TreeNode> visited=new HashSet<>();
+        Queue<TreeNode> q=new LinkedList<>();
+        int c=0;
+        q.offer(target);
+        visited.add(target);
+        while(!q.isEmpty()){
+            if(c==k)
+            break;
+
+            c++;
+            int n=q.size();
+            for(int i=0;i<n;i++){
+                TreeNode t=q.poll();
+                if(t.left!=null&&!visited.contains(t.left)){
+                    q.offer(t.left);
+                    visited.add(t.left);
+                }
+                if(t.right!=null&&!visited.contains(t.right)){
+                    q.offer(t.right);
+                    visited.add(t.right);
+                }
+                if(tm.get(t)!=null&&!visited.contains(tm.get(t))){
+                    q.offer(tm.get(t));
+                    visited.add(tm.get(t));
+                }
+
+            }
+        }
+        ArrayList<Integer> ans=new ArrayList<>();
+        while(!q.isEmpty()){
+            ans.add(q.poll().val);
+        }
+        return ans;
+    }
+    public void findParent(TreeNode root,Map<TreeNode,TreeNode> tm){
+        Queue<TreeNode> q=new LinkedList<>();
+        q.offer(root);
+        while(!q.isEmpty()){
+            TreeNode temp=q.poll();
+            if(temp.left!=null){
+                tm.put(temp.left,temp);
+                q.offer(temp.left);
+            }
+            if(temp.right!=null){
+                tm.put(temp.right,temp);
+                q.offer(temp.right);
+            }
+        }
+    }
+}
+----------------------------------------------------------
+MINIMUM TIME REQUIRED FOR BURNING A TREE - GFG
+----------------------------------------------------------
+
+class Solution {
+    public int minTime(Node root, int target) {
+        // code here
+        Map<Node,Node> tm=new HashMap<>();
+        Node tar=findParent(root,target,tm);
+        int res=findMin(tar,tm);
+        return res;
+    }
+    public int findMin(Node root,Map<Node,Node> tm){
+        int d=0;
+        Set<Node> hs=new HashSet<>();
+        Queue<Node> q=new LinkedList<>();
+        q.offer(root);
+        hs.add(root);
+        while(!q.isEmpty()){
+            int n=q.size();
+            int flag=0;
+            for(int i=0;i<n;i++){
+                root=q.poll();
+                if(root.left!=null&&!hs.contains(root.left)){
+                    flag=1;
+                    hs.add(root.left);
+                    q.add(root.left);
+                }
+                if(root.right!=null&&!hs.contains(root.right)){
+                    flag=1;
+                    hs.add(root.right);
+                    q.add(root.right);
+                }
+                if(tm.get(root)!=null&&!hs.contains(tm.get(root))){
+                    flag=1;
+                    hs.add(tm.get(root));
+                    q.add(tm.get(root));
+                    
+                }
+            }
+            if(flag==1)
+            d++;
+        }
+        return d;
+    }
+    public Node findParent(Node root,int target,Map<Node,Node> tm){
+        Queue<Node> q=new LinkedList<>();
+        q.offer(root);
+        Node temp=null;
+        while(!q.isEmpty()){
+            root=q.poll();
+            if(root.data==target)
+            temp=root;
+            if(root.left!=null){
+                tm.put(root.left,root);
+                q.add(root.left);
+            }
+            if(root.right!=null){
+                tm.put(root.right,root);
+                q.add(root.right);
+            }
+        }
+        return temp;
+    }
+}
+---------------------------------------------------------------------------------
