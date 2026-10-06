@@ -1,0 +1,146 @@
+ public static int threeSumClosest(int[] nums, int target) { 
+     if(nums.length==3)
+     return nums[0]+nums[1]+nums[2];
+     Arrays.sort(nums);
+     int cs=nums[0]+nums[1]+nums[nums.length-1];
+     for(int i=0;i<nums.length-2;i++){
+         int j=i+1,k=nums.length-1;
+         while(j<k){
+             int s=nums[i]+nums[j]+nums[k];
+             if(Math.abs(s-target)<Math.abs(cs-target)){
+                 cs=s;
+             }
+             if(s==target)
+             return target;
+             else if(s>target)
+             k--;
+             else
+             j++;
+         }
+     }
+     
+    return cs;
+     
+  }
+  -----------------------------------------------------------------
+    public static int triangleNumber(int[] nums) { 
+     int c=0;
+     int n=nums.length;
+     Arrays.sort(nums);
+     for(int k=n-1;k>1;k--){
+         int i=0,j=k-1;
+         while(i<j){
+             if(nums[i]+nums[j]>nums[k]){
+                 c+=j-i;
+                 j--;
+             }else{
+                 i++;
+            }
+         }
+     }
+     return c;
+  }
+  ----------------------------------------------------------------
+  //POTD
+  class Solution {
+    public int minAddToMakeValid(String s) {
+        Stack<Character> st=new Stack<>();
+        int c=0;
+        for(char ch:s.toCharArray()){
+            if(ch=='(')
+            st.push(ch);
+            else{
+                if(st.isEmpty())
+                c++;
+                else
+                st.pop();
+            }
+        }
+        return c+st.size();
+    }
+}
+-------------------------------------------------------------------
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Css Practice Problem 1</title>
+    <link rel="stylesheet" href="try.css">
+    
+</head>
+<body>
+ 
+    <div id="head" style="background-color: red;">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum atque error quisquam, doloribus quia tempore sint! Commodi impedit odit voluptate facilis, ad possimus! Impedit eligendi dignissimos beatae amet alias? Quae, sit accusamus? Quae?
+    </div>
+</body>
+</html>
+-------------------------------------------------------------------
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Css Practice Problem 1</title>
+    <link rel="stylesheet" href="try.css">
+    
+</head>
+<body>
+ 
+    <div id="head" style="background-color: red;">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum atque error quisquam, doloribus quia tempore sint! Commodi impedit odit voluptate facilis, ad possimus! Impedit eligendi dignissimos beatae amet alias? Quae, sit accusamus? Quae?
+    </div>
+</body>
+</html>
+---------------------------------------------------------------
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Selectors</title>
+    <style>
+        *{
+            padding: 8px;
+            margin: 9px;
+        }
+        h1,h2,h3{
+            color:blue;
+        }
+        div,h2{
+            background-color: aliceblue;
+        }
+        p.red{
+            color:red;
+        }
+        
+    </style>
+</head>
+<body>
+    <div>
+    <h1>Harry Bro ka Practice</h1>
+
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut, repudiandae! Vel voluptate at praesentium laborum est nemo modi, atque sunt dolore quaerat ea molestias totam explicabo fuga, ex corrupti ipsum!
+        </p>
+    </div>
+    <h2>
+        this is the h2 tag
+    </h2>
+    <h3>
+        this is the h3 tag
+    </h3>
+</body>
+</html>
+-----------------------------------------------------------------
+ #first{
+        background-color: red;
+       }
+       /*here we are using the class name so we are using . symbol for styling */
+       .bg-blue{
+        background-color:blue;
+        color:aliceblue
+       }
+-----------------------------------------------------------------
+
