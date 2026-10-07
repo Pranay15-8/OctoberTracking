@@ -1,0 +1,131 @@
+
+---------------------------------------------------------------
+class Solution {
+    public ListNode moveZerosToFront(ListNode arr) { // Don't change the number of parameters
+
+        ListNode zeroHead = null;
+        ListNode zeroTail = null;
+
+        ListNode nonZeroHead = null;
+        ListNode nonZeroTail = null;
+
+        ListNode curr = arr;
+
+        while (curr != null) {
+
+            ListNode next = curr.next;
+            curr.next = null;
+
+            if (curr.val == 0) {
+
+                if (zeroHead == null) {
+                    zeroHead = curr;
+                    zeroTail = curr;
+                } else {
+                    zeroTail.next = curr;
+                    zeroTail = curr;
+                }
+
+            } else {
+
+                if (nonZeroHead == null) {
+                    nonZeroHead = curr;
+                    nonZeroTail = curr;
+                } else {
+                    nonZeroTail.next = curr;
+                    nonZeroTail = curr;
+                }
+            }
+
+            curr = next;
+        }
+
+        // No zero nodes
+        if (zeroHead == null) {
+            return nonZeroHead;
+        }
+
+        // Put non-zero list after zero list
+        zeroTail.next = nonZeroHead;
+
+        return zeroHead;
+    }
+}
+--------------------------------------------------------------
+class Solution {
+    public ListNode middleNode(ListNode head) {
+
+        ListNode slow = head;
+        ListNode fast = head;
+
+        while (fast != null && fast.next != null) {
+            slow = slow.next;
+            fast = fast.next.next;
+        }
+
+        return slow;
+    }
+}
+----------------------------------------------------
+class Solution {
+    public ListNode reverseList(ListNode head) {
+
+        ListNode prev = null;
+        ListNode curr = head;
+
+        while (curr != null) {
+
+            ListNode next = curr.next;
+
+            curr.next = prev;
+
+            prev = curr;
+            curr = next;
+        }
+
+        return prev;
+    }
+}
+--------------------------------------------------------------------
+class Solution {
+    Set<String> hs=new HashSet();
+    int maxLen;
+    int n;
+    public List<String> removeInvalidParentheses(String s) {
+        n=s.length();
+        maxLen=0;
+        String curr="";
+        pick(0,s,curr,0);
+        return new ArrayList<>(hs);
+    }
+    public void pick(int i,String s,String curr,int c){
+        if(c<0){
+            return;
+        }
+        if(i==n){
+            if(c==0){
+            if(curr.length()>maxLen){
+                maxLen=curr.length();
+                hs.clear();
+            }
+            if(curr.length()==maxLen){
+                hs.add(curr);
+            }
+            }
+            return;
+
+        }
+        char ch=s.charAt(i);
+        if(ch=='('){
+            pick(i+1,s,curr+ch,c+1);
+            pick(i+1,s,curr,c);
+        }else if(ch==')'){
+            pick(i+1,s,curr+ch,c-1);
+            pick(i+1,s,curr,c);
+        }
+        else{
+            pick(i+1,s,curr+ch,c);
+        }
+    }
+}
+-------------------------------------------
